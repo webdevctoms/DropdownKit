@@ -14,7 +14,6 @@ kitBuilder.prototype.getButtons = function(buttonIDs) {
 }
 
 kitBuilder.prototype.initButtons = function(button){
-	console.log("test");
 	button.addEventListener("click",function(e){
 		this.buttonClicked(e)
 	}.bind(this),false);
@@ -23,11 +22,10 @@ kitBuilder.prototype.initButtons = function(button){
 kitBuilder.prototype.buttonClicked = function(event){
 	event.stopPropagation();
 	event.preventDefault();
-	console.log("clicked", event.target);
+	console.log("clicked", event.currentTarget);
 }
 
 document.addEventListener( "DOMContentLoaded", function() {
 	var kit1 = new kitBuilder("bundle-container1",["bundle-button1","bundle-button2","bundle-button3"]);
 });
 
-console.log("test");
