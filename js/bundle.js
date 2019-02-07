@@ -37,10 +37,17 @@ kitBuilder.prototype.buttonClicked = function(event){
 	event.preventDefault();
 	console.log("clicked", event.currentTarget);
 	console.log("next sibling", event.currentTarget.nextElementSibling);
-	var optionContent = event.currentTarget.nextElementSibling;	
-	var bundleId = event.currentTarget.dataset.bundleid;
-	console.log(this.bundleHeights, bundleId);
-	optionContent.firstElementChild.style.height = this.bundleHeights[bundleId] + "px";
+	var optionContent = event.currentTarget.nextElementSibling;
+	console.log(optionContent.firstElementChild.style.height);
+	if(optionContent.firstElementChild.style.height === "0px"){
+		var bundleId = event.currentTarget.dataset.bundleid;
+		console.log(this.bundleHeights, bundleId);
+		optionContent.firstElementChild.style.height = this.bundleHeights[bundleId] + "px";
+	}
+	else{
+		optionContent.firstElementChild.style.height = "0px";
+	}	
+	
 }
 
 document.addEventListener( "DOMContentLoaded", function() {
