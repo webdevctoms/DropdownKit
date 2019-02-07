@@ -6,7 +6,6 @@ body {
 	position: relative;
 	width: 50%;
 	margin: auto;
-
 }
 
 .bundle-button{
@@ -41,4 +40,10 @@ body {
 .bundle-selectors{
 	border-bottom: 1px solid #ddd;
 	margin-top: 10px;
+}
+
+.bundle-selector-content{
+	transition: height 1s;
+	overflow: hidden;
+	/*height: 0px;*/
 }
