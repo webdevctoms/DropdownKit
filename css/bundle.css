@@ -9,6 +9,10 @@ body {
 
 }
 
+.bundle-button{
+	border-bottom: 1px solid #0c0c0d;
+}
+
 .bundle-button p{
 	display: inline;
 }
@@ -28,4 +32,9 @@ body {
 	transition: 500ms;
 	position: absolute;
 	right: 0px;
+}
+
+.bundle-selectors{
+	border-bottom: 1px solid #ddd;
+	margin-top: 10px;
 }
