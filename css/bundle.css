@@ -4,6 +4,9 @@ body {
 
 .bundle-container{
 	position: relative;
+	width: 50%;
+	margin: auto;
+
 }
 
 .bundle-button p{
