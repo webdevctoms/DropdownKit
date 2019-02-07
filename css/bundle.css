@@ -19,7 +19,17 @@ body {
 .bundle-button:hover{
 	cursor: pointer;
 }
-
+.arrowIcon{
+	display: inline-block;
+	width: 15px;
+	height: 18px;
+	content: "";
+	transform: rotate(0deg);
+	transition: 500ms;
+	position: absolute;
+	right: 0px;
+}
+/*
 .bundle-button::after{
 	background-image: url('../icons/down-arrow.png');
 	background-position: center;
@@ -29,14 +39,14 @@ body {
 	width: 15px;
 	height: 18px;
 	content: "";
-	/*change this value with js to cause the rotation on click*/
+
 	transform: rotate(180deg);
-	/*this will cause rotate animation*/
+
 	transition: 500ms;
 	position: absolute;
 	right: 0px;
 }
-
+*/
 .bundle-selectors{
 	border-bottom: 1px solid #ddd;
 	margin-top: 10px;

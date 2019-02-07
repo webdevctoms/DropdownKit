@@ -38,13 +38,17 @@ kitBuilder.prototype.buttonClicked = function(event){
 	console.log("clicked", event.currentTarget);
 	console.log("next sibling", event.currentTarget.nextElementSibling);
 	var optionContent = event.currentTarget.nextElementSibling;
-	console.log(optionContent.firstElementChild.style.height);
+	console.log("button children", event.currentTarget.children);
+	var arrowIcon = event.currentTarget.children[1];
+
 	if(optionContent.firstElementChild.style.height === "0px"){
+		arrowIcon.style.transform = "rotate(180deg)";
 		var bundleId = event.currentTarget.dataset.bundleid;
 		console.log(this.bundleHeights, bundleId);
 		optionContent.firstElementChild.style.height = this.bundleHeights[bundleId] + "px";
 	}
 	else{
+		arrowIcon.style.transform = "rotate(0deg)";
 		optionContent.firstElementChild.style.height = "0px";
 	}	
 	
@@ -53,4 +57,3 @@ kitBuilder.prototype.buttonClicked = function(event){
 document.addEventListener( "DOMContentLoaded", function() {
 	var kit1 = new kitBuilder("bundle-container1",["bundle-button1","bundle-button2","bundle-button3"]);
 });
-
