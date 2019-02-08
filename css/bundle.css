@@ -1,13 +1,13 @@
 body {
   margin: 0;
 }
-
+/*container styles*/
 .bundle-container{
 	position: relative;
 	width: 50%;
 	margin: auto;
 }
-
+/*button styles*/
 .bundle-button{
 	border-bottom: 1px solid #0c0c0d;
 }
@@ -19,6 +19,7 @@ body {
 .bundle-button:hover{
 	cursor: pointer;
 }
+/*icon styles*/
 .arrowIcon{
 	display: inline-block;
 	width: 15px;
@@ -29,7 +30,7 @@ body {
 	position: absolute;
 	right: 0px;
 }
-
+/*selector styles*/
 .bundle-selectors{
 	margin-top: 10px;
 }

@@ -15,13 +15,11 @@ kitBuilder.prototype.getHeights = function(isOpen = false){
 		if(!isOpen){
 			this.bundleContentElements[i].style.height = "0px";
 		}		
-		//bundleContentElements[i].style.display = "none";
+	
 	}
 
 	return heights;
 }
-
-
 
 kitBuilder.prototype.getButtons = function(buttonIDs) {
 	var buttonArr = [];
@@ -49,8 +47,24 @@ kitBuilder.prototype.windowResized = function(event){
 	console.log("offset height 1: ", document.getElementById("bundle-selector-content-1").scrollHeight);
 	console.log("offset height 2: ", document.getElementById("bundle-selector-content-2").scrollHeight);
 	console.log("offset height 3: ", document.getElementById("bundle-selector-content-3").scrollHeight);
-	//var bundleContentElements = document.getElementsByClassName(bundleSelectorClass); 
+	//set heights to auto that are open
+	for(var i =0; i < this.bundleContentElements.length;i++){
+		
+		if(this.bundleContentElements[i].style.height !== "0px"){
+			console.log("first loop ",this.bundleContentElements[i].style.height);
+			this.bundleContentElements[i].style.height = "auto";
+		}
+	}
 	this.bundleHeights = this.getHeights(true);
+	//then reassign these heights to keep animation effect
+	for(var i =0; i < this.bundleContentElements.length;i++){
+		
+		if(this.bundleContentElements[i].style.height !== "0px"){
+			console.log(this.bundleContentElements[i].scrollHeight);
+			this.bundleContentElements[i].style.height = this.bundleContentElements[i].scrollHeight + "px";
+		}
+	}
+	
 }
 
 kitBuilder.prototype.buttonClicked = function(event){
