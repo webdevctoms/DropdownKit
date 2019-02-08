@@ -29,26 +29,8 @@ body {
 	position: absolute;
 	right: 0px;
 }
-/*
-.bundle-button::after{
-	background-image: url('../icons/down-arrow.png');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	display: inline-block;
-	width: 15px;
-	height: 18px;
-	content: "";
 
-	transform: rotate(180deg);
-
-	transition: 500ms;
-	position: absolute;
-	right: 0px;
-}
-*/
 .bundle-selectors{
-	border-bottom: 1px solid #ddd;
 	margin-top: 10px;
 }
 
