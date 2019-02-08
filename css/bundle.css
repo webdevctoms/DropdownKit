@@ -45,9 +45,28 @@ body {
 	float: right;
 }
 
+.componentLabel{
+	max-width: 140px;
+}
+
+@media (min-width: 321px){
+	.componentLabel{
+		max-width: 180px;
+	}
+	
+}
+
+@media (min-width: 750px){
+	.componentLabel{
+		max-width: 300px;
+	}
+	
+}
+
 @media (min-width: 800px){
 	.bundle-selector-content{
 		transition: height 500ms;
 		/*height: 0px;*/
 	}
+
 }
