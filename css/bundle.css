@@ -27,6 +27,9 @@ body {
 	content: "";
 	transform: rotate(0deg);
 	transition: 500ms;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	-o-transition: 500ms;
 	position: absolute;
 	right: 0px;
 }
@@ -37,6 +40,9 @@ body {
 
 .bundle-selector-content{
 	transition: height 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
 	overflow: hidden;
 	/*height: 0px;*/
 }
