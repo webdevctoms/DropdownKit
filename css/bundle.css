@@ -41,24 +41,40 @@ body {
 	/*height: 0px;*/
 }
 
-.numberCounter{
-	float: right;
+.componenContainer{
+	display: flex;
+	justify-content: space-between;
 }
 
 .componentLabel{
-	max-width: 120px;
+	max-width: 105px;
+}
+
+.numberCounter{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.controlIcon{
+	height: 15px;
+	width: 12px;
 }
 
 @media (min-width: 321px){
 	.componentLabel{
-		max-width: 140px;
+		max-width: 120px;
 	}
 	
 }
 
 @media (min-width: 400px){
 	.componentLabel{
-		max-width: 160px;
+		max-width: 150px;
+	}
+
+	.controlIcon{
+		height: 16px;
+		width: 13px;
 	}
 	
 }
@@ -67,6 +83,15 @@ body {
 @media (min-width: 750px){
 	.componentLabel{
 		max-width: 300px;
+	}
+
+	.controlIcon{
+		height: 21px;
+		width: 19px;
+	}
+
+	.numberCounter{
+		font-size: 18px;
 	}
 	
 }
