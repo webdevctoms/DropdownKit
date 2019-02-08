@@ -88,7 +88,7 @@ kitBuilder.prototype.buttonClicked = function(event){
 		optionContent.firstElementChild.style.height = "0px";
 		setTimeout(function(){
 			optionContent.firstElementChild.style.borderBottom = "none";
-		},500);
+		},450);
 	}	
 	
 }

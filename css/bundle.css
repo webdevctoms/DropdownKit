@@ -40,3 +40,14 @@ body {
 	overflow: hidden;
 	/*height: 0px;*/
 }
+
+.numberCounter{
+	float: right;
+}
+
+@media (min-width: 800px){
+	.bundle-selector-content{
+		transition: height 500ms;
+		/*height: 0px;*/
+	}
+}
