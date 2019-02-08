@@ -53,11 +53,20 @@ body {
 .numberCounter{
 	margin-left: 5px;
 	margin-right: 5px;
+	width:15px;
 }
 
 .controlIcon{
 	height: 15px;
 	width: 12px;
+}
+
+.controlIcon:hover{
+	cursor: pointer;
+}
+
+.price{
+	font-size: 15px;
 }
 
 @media (min-width: 321px){
@@ -69,7 +78,7 @@ body {
 
 @media (min-width: 400px){
 	.componentLabel{
-		max-width: 150px;
+		max-width: 125px;
 	}
 
 	.controlIcon{
@@ -102,4 +111,12 @@ body {
 		/*height: 0px;*/
 	}
 
+}
+
+@media (min-width: 1000px){
+	.componentLabel{
+		max-width: 800px;
+	}
+
+	
 }
