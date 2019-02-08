@@ -51,7 +51,7 @@ body {
 
 @media (min-width: 321px){
 	.componentLabel{
-		max-width: 140px;
+		max-width: 120px;
 	}
 	
 }
