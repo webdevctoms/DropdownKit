@@ -5,14 +5,19 @@ function kitBuilder(containerID,buttonIDs,bundleSelectorClass,plusClass,minusCla
 	this.minusButtons = document.getElementsByClassName(minusClass);
 	this.bundleContentElements = document.getElementsByClassName(bundleSelectorClass);
 	this.bundleHeights = this.getHeights();
-	this.bundleButtons.forEach(button => this.initButtons(button));
+	for(var i = 0;i < this.bundleButtons.length;i++){
+		this.initButtons(this.bundleButtons[i]);
+	}
 	this.bundleSelectorClass = bundleSelectorClass;
 	this.initPlusButtons(this.plusButtons);
 	this.initMinusButtons(this.minusButtons);
 	this.initWindowListener();
 }
 
-kitBuilder.prototype.getHeights = function(isOpen = false){
+kitBuilder.prototype.getHeights = function(isOpen){
+	if(isOpen === undefined){
+		isOpen = false;
+	}
 	var heights = [];
 	for(var i = 0;i < this.bundleContentElements.length;i++){
 		heights.push(this.bundleContentElements[i].scrollHeight);
@@ -26,9 +31,14 @@ kitBuilder.prototype.getHeights = function(isOpen = false){
 
 kitBuilder.prototype.getButtons = function(buttonIDs) {
 	var buttonArr = [];
+	for(var i = 0;i < buttonIDs.length;i++){
+		buttonArr.push(document.getElementById(buttonIDs[i]));
+	}
+	/*
 	buttonIDs.forEach(buttonId => {
 		buttonArr.push(document.getElementById(buttonId));
 	});
+	*/
 	//console.log(buttonArr);
 	return buttonArr;
 }
